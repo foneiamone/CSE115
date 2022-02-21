@@ -9,10 +9,16 @@ Sample output:
 The Surface area of a Sphere = 314.16 */
 
 #include <stdio.h>
+#define PI 3.1416
 
 int main()
 {
+    double r;
 
+    printf("Please Enter the radius of a Sphere: ");
+    scanf("%lf", &r);
+
+    printf("The Surface area of a Sphere = %.2lf", 4* PI * (r*r));
 
     return 0;
 }

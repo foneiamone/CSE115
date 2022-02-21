@@ -16,7 +16,12 @@ XOR: 408 */
 
 int main()
 {
+    int n, m;
 
+    printf("Enter two numbers: ");
+    scanf("%d %d", &n, &m);
+
+    printf("AND: %d\nOR: %d\nXOR: %d", n & m, n | m, n ^ m);
 
     return 0;
 }

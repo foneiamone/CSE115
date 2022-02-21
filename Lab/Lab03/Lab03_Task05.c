@@ -14,7 +14,12 @@ After 3 bit Right Shift: 28 */
 
 int main()
 {
+    int n;
 
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    printf("After 3 bit Left Shift: %d\nAfter 3 bit Right Shift: %d", n << 3, n >> 3);
 
     return 0;
 }
