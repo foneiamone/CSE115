@@ -14,12 +14,12 @@ Other digits: 25 */
 
 int main()
 {
-    int num, result;
+    int num;
 
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    printf("Last digit: %d ", result = num % 10);
+    printf("Last digit: %d ", num % 10);
     printf("\nOther digits: %d", num /= 10);
 
     return 0;
