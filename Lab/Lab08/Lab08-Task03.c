@@ -2,32 +2,35 @@
 
 #include <stdio.h>
 
-int max(int n, int m)
-{
-    return (n > m) ? n : m;
-}
-
-int lcm(int n, int m)
-{
-    int mx = max(m, n);
-
-    while (1)
-    {
-        if (mx % n == 0 && mx % m == 0)
-        {
-            return mx;
-            break;
-        }
-        ++mx;
-    }
-}
+int max(int, int);
+int lcm(int, int);
 
 void main()
 {
-    int n, m;
+    int a, b;
 
     printf("Enter two numbers: ");
-    scanf("%d %d", &n, &m);
+    scanf("%d %d", &a, &b);
 
-    printf("LCM: %d", lcm(n, m));
+    printf("LCM: %d", lcm(a, b));
+}
+
+int max(int a, int b)
+{
+    return (a > b) ? a : b;
+}
+
+int lcm(int a, int b)
+{
+    int n = max(a, b);
+
+    while (1)
+    {
+        if (n % a == 0 && n % b == 0)
+        {
+            return n;
+            break;
+        }
+        n++;
+    }
 }

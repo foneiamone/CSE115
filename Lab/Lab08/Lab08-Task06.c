@@ -2,27 +2,32 @@
 
 #include <stdio.h>
 
-int gcd(int a, int b)
+int gcd(int n, int m)
 {
-    int result;
+    int g, mx = n;
 
-    for (int i = 1; i <= a && i <= b; ++i)
+    if (m > n)
     {
-        if (a % i == 0 && b % i == 0)
+        mx = m;
+    }
+
+    for (int i = 1; i <= mx; i++)
+    {
+        if (n % i == 0 && m % i == 0)
         {
-            result = i;
+            g = i;
         }
     }
 
-    return result;
+    return g;
 }
 
 void main()
 {
-    int x, y;
+    int n, m;
 
     printf("Enter two numbers: ");
-    scanf("%d %d", &x, &y);
+    scanf("%d %d", &n, &m);
 
-    printf("GCD: %d", gcd(x, y));
+    printf("GCD: %d", gcd(n, m));
 }
