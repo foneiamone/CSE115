@@ -1,4 +1,11 @@
-/* 5. Write a C programs to print the following patterns: */
+/* 5. Write a C programs to print the following patterns: 
+     * 
+    * * 
+   * * * 
+  * * * * 
+ * * * * * 
+ 
+*/
 
 #include <stdio.h>
 
