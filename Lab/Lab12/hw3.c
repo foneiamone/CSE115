@@ -99,7 +99,7 @@ void main()
     input(b);
 
     char title[50];
-    printf("Enter title to search: ");
+    printf("\nEnter title to search: ");
     gets(title);
     search(b, title);
 }
