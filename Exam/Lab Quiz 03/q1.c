@@ -2,7 +2,18 @@
 In the main function create an object of Employee named employee and fill the employee object by taking user input.
 After this store the employee object into a binary file named employee.bin and then create another object of Employee
 named employee2 and read the object you had write in employee.bin file into the employee2 variable and print it in the
-console. */
+console.
+
+-- WRITE --
+Employee name: Bat Man
+Employee ID: 726372
+Employee salary: 81283.23
+
+-- READ --
+Employeee Name: Bat Man
+Employee ID: 726372
+Employee salary: 81283.2266
+ */
 
 #include <stdio.h>
 
@@ -50,7 +61,7 @@ void main()
     int n = fread(&employee2, sizeof(struct Employee), 1, f);
     for (int i = 0; i < n; i++)
     {
-        printf("Employeee Name: %s\nEmployee ID: %d\nEmployee salary: %.4f\n", employee2.name, employee2.id, employee2.salary);
+        printf("Employeee Name: %s\nEmployee ID: %d\nEmployee salary: %.4f\n\n", employee2.name, employee2.id, employee2.salary);
     }
 
     fclose(f);
