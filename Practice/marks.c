@@ -1,5 +1,8 @@
 /* consider a file Marks.txt contains some marks. Write a program in c to print marks from the Marks.txt file,and
-write all the marks greater than or equal to 33 to another file Passed.txt */
+write all the marks greater than or equal to 33 to another file Passed.txt
+
+MARKS: 32 60 92 40 55 44 10 67 99 73
+WRITE DONE: Passed.txt */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,18 +25,20 @@ void main()
     }
 
     int a;
-    printf("Marks: ");
+    printf("MARKS: ");
     while (!feof(f))
     {
         fscanf(f, "%d", &a);
 
-        if (a > 33)
+        if (a >= 33)
         {
             fprintf(e, "%d\n", a);
         }
 
         printf("%d ", a);
     }
+
+    printf("\nWRITE DONE: Passed.txt");
 
     fclose(f);
     fclose(e);
